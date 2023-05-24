@@ -18,6 +18,10 @@ def similarity(bad_words, edits):
         w2 = embeddings.get_word_vector(word)
         dist = np.linalg.norm(w2 - w1)
         edit_scores[word] = dist 
-        
+
     sorted_edit_scores =  sorted(edit_scores.items(), key=lambda x:x[1])
     return sorted_edit_scores 
+
+edits = ['way', 'one', 'night', 'world', 'only', 'same', 'best', 'sky', 'time', 'dark', 'sun', 'morning', 'day', 'right', 'left', 'thunder', 'things', 'middle', 'air', 'rhythm', 'floor', 'music', 'end', 'words', 'phone', 'stars', 'pain', 'door', 'beat', 'last', 'ones', 'lights', 'love', 'city', 'summer', 'ground', 'ocean', 'line', 'edge', 'party', 'truth', 'dance', 'club', 'first', 'most', 'good', 'fire', 'moon', 'other', 'side']
+
+print(similarity('ass', edits))
