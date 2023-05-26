@@ -7,7 +7,7 @@ import fasttext.util
 from sklearn.manifold import TSNE
 import numpy as np
 
-embeddings = fasttext.load_model('en.bin')   #load embedding into memeory 
+embeddings = fasttext.load_model('en.bin')   #load embedding into memeory, need to have en.bin file in directory 
 
 
 # takes in the bad word and a list of possibel replacemnt words using the N gram model 
