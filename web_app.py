@@ -6,12 +6,18 @@ from annotated_text import annotated_text
 def main():
 
     st.title("Kidz Bopify")
-    # Using object notation
-    selectbox = st.sidebar.selectbox(
-    "Choose An Algorithm to clean-edit your lyrics",
-    ("N-grams", "Transformer","Semantic Simlarity"))
+    
+    # Create the streamlit sidebar 
+    with st.sidebar:
+        st.header("Some Quick Info!")
+        st.divider()
+        st.write("Welcome! This is our final project for COSC72 at Dartmouth College. The program inputs your favorite song lyrics \
+                 and clean-edits it via a few chosen algorithms!")
+        selectbox = st.selectbox(
+        "Choose An Algorithm to clean-edit your lyrics",
+        ("N-grams", "Transformer","Semantic Simlarity"))
     # User input
-    corpus = st.text_area("Enter your unclean song lyrics here:", height=200)
+    corpus = st.text_area("Enter your unclean song lyrics here:", height=200).lower()
     flagged_words = st.text_input("Enter the flagged words (separated by commas):")
     flagged_words = [word.strip() for word in flagged_words.split(",") if word.strip()]
 
