@@ -1381,7 +1381,6 @@ yankee
 yellowman
 zigabo
 zipperhead
-badword
 addict
 alcohol
 bar
@@ -1608,3 +1607,12 @@ trigger
 victim
 war
 weapon
+gag
+choke
+spit
+fagg
+raw
+juicy
+weed
+smartass
+hardass
